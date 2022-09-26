@@ -1,6 +1,6 @@
 $modPath = $args[0]
 $modPath = "$modPath/mods"
-$modloader = "args[1]"
+$modloader = $args[1]
 $jenkins = "https://ci.wynntils.com/job/Artemis/lastSuccessfulBuild/artifact/$modloader/build/libs/"
 $modname = "wynntils*-$modloader.jar"
 $exists = Test-Path -Path "$modPath/$modname" -PathType Leaf
@@ -20,9 +20,11 @@ if ($connects) {
     if (!($mod -eq $filename)) {
       Remove-Item -Path "$modPath/$mod"
       Invoke-WebRequest "$jenkins/$filename" -OutFile "$modPath/$filename"
+      Write-Host "Updated successfuly"
     }
   }
   elseif ($exists -eq $false) {
     Invoke-WebRequest "$jenkins/$filename" -OutFile "$modPath/$filename"
+    Write-Host "Downloaded successfully"
   }
 }
