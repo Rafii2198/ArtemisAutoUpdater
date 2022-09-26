@@ -13,10 +13,25 @@ Artemis Auto Updater is a script that (you guessed it) automatically updates [Wy
 
 1. Open the settings of an instance of your Minecraft 1.18.2 (create one if you haven't)
 1. Go to the Custom Commands tab
-1. Copy one of the strings below, depending on your mod loader, and paste them into Pre-launch command field
-   - Forge: `Powershell.exe Set-ExecutionPolicy Bypass -Scope Process -Force; $INST_MC_DIR/ArtemisUpdate.ps1 "$INST_MC_DIR" "forge"`
-   - Fabric: `Powershell.exe Set-ExecutionPolicy Bypass -Scope Process -Force; $INST_MC_DIR/ArtemisUpdate.ps1 "$INST_MC_DIR" "fabric"`
-   - Quilt: `Powershell.exe Set-ExecutionPolicy Bypass -Scope Process -Force; $INST_MC_DIR/ArtemisUpdate.ps1 "$INST_MC_DIR" "quilt"`
+1. Copy one of the strings below, depending on your mod loader, and paste it into Pre-launch command field
+- Forge: 
+
+```ps1
+Powershell.exe Set-ExecutionPolicy Bypass -Scope Process -Force; $INST_MC_DIR/ArtemisUpdate.ps1 "$INST_MC_DIR" "forge"
+```
+
+   - Fabric: 
+
+```ps1
+Powershell.exe Set-ExecutionPolicy Bypass -Scope Process -Force; $INST_MC_DIR/ArtemisUpdate.ps1 "$INST_MC_DIR" "fabric"
+```
+
+   - Quilt: 
+    
+```ps1
+Powershell.exe Set-ExecutionPolicy Bypass -Scope Process -Force; $INST_MC_DIR/ArtemisUpdate.ps1 "$INST_MC_DIR" "quilt"
+```
+
 4. Go to [Releases](https://github.com/Rafii2198/ArtemisAutoUpdater/releases) and download the latest script file
 5. Place downloaded file in .minecraft folder of your instance
     - If you don't know where that folder is, then right-click on your instance and select Minecraft Folder
