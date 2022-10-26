@@ -7,7 +7,7 @@ Artemis Auto Updater is a script that (you guessed it) automatically updates [Wy
 ## Requirements
 
 * Operating System: Windows 10/11
-* [PolyMC](https://polymc.org/) or [MultiMC](https://multimc.org/)
+* [Prism Launcher](https://prismlauncher.org/) or [MultiMC](https://multimc.org/)
 
 ## Usage
 
